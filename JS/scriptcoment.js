@@ -307,4 +307,379 @@
 //console.log(parseInt(test));
 //console.log(parseFloat(test));
 
+// First Level Function Task
+
+//S cube = 6a^2; V cube = a^3
+
+//function calculateVolumeAndArea(length) {
+//if (typeof(length) !== 'number' || length < 0 || !Number.isInteger(length)) {
+//    return "При вычислении произошла ошибка";
+//}
+
+//let volume = 0,
+//    area = 0;
+
+//volume = length * length * length;
+// length ** 3 - это тоже самое, что и выше или варианты через цикл.
+// ** - это оператор степени, напоминаю. Но онлайн редактор его не принимает =/
+//area = 6 * (length * length);
+
+//return `Объем куба: ${volume}, площадь всей поверхности: ${area}`;
+//}
+//calculateVolumeAndArea(5);
+
+//function getCoupeNumber(seatNumber) {
+//if( typeof(seatNumber) !== 'number' || seatNumber < 0 || !Number.isInteger(seatNumber)) {
+//    return 'Error! Check the correctness of the entered seat number.';
+//}
+//if (seatNumber === 0 || seatNumber > 36) {
+//    return ' There are no such places in the car.';
+//}
+//for( let i = 4; i <= 36; i + 4) {
+//    if(seatNumber <= i) {
+//        return Math.ceil(i / 4);   
+//    }
+//}
+//}
+//getCoupeNumber(12);
+
+// Second Level Function Task
+
+//function getTimeFromMinutes(mins) {
+//if(typeof(mins) !== 'number' || mins < 0 || !Number.isInteger(mins)) {
+//    return ' Error,check the data!';
+//}
+//for (let i = 1; i <= 600; i++) {
+//   if(mins <= i) {
+//            let hours = Math.trunc(mins/60);
+//            let minutes = mins % 60;
+//            return hours + 'ч. ' + minutes + 'м.';
+//        }
+//    }
+//}
+//console.log(getTimeFromMinutes(80));
+
+//function findMaxNumber(a, b, c, d) {
+//if(typeof(a, b, c, d) !== 'number') {
+//    return 0;
+//} else {
+//    return Math.max(a, b ,c, d);
+//}
+//}
+//console.log(findMaxNumber(1, '5', 6.6, 10.5));
+
+// Third Level, Fibonacci Numbers
+
+//function fib(length) {
+//  if(typeof(length) !== 'number' || length <= 0 || !Number.isInteger(length)) {
+//    return '';
+//   }
+//    let result = '';
+//    let firstNum = 0;
+//    let secondNum = 1;
+//   for(let i = 0; i < length ; i++) {
+//    if (i + 1 === length) {
+//        result += `${firstNum}`;
+//    }
+//        else {
+//            result +=`${firstNum} `;
+//        }
+//        let thirdNum = firstNum + secondNum;
+//        firstNum = secondNum;
+//        secondNum = thirdNum;
+//   }
+//    return result;
+//   }
+//console.log(fib(14));
+
+// Call-Back Function ..
+
+//function learnJS(lang, callback) {
+//    console.log(`I learn: ${lang}`);
+//    callback();
+//}
+
+//function done() {
+//    console.log('I passed this lesson!');
+//}
+//learnJS('JavaScript', done);
+
+// Об'єкти, деструктиризація об'єктів ..
+
+//const options = {
+//    name: 'test',
+//    width: 1024,
+//    height: 1024,
+//    colors: {
+//        border: 'black',
+//        bg: 'red'
+//    },
+//    makeTest: function () {
+//        console.log('Test');
+//    }
+//};
+
+//options.makeTest();
+
+//const {border, bg} = options.colors;
+//console.log(border);
+
+//console.log(Object.keys(options).length);
+
+//console.log(options.name);
+//delete options.name;
+//console.log(options);
+
+//let counter = 0;
+//for( let key in options) {
+//    if(typeof(options[key]) === 'object') {
+//        for (let i in options[key]) {
+//            console.log(`Options ${i} matter ${options[key][i]}`);
+//            counter++;
+//        }
+//    } else {
+//        console.log(`Options ${key} matter ${options[key]}`);
+//        counter++;
+//    }
+//}
+//console.log(counter);
+
+//console.log(Object.keys(options).length);
+
+// Масиви і псевдомавсиви ..
+//const arr = [1, 4, 16, 6, 8];
+//arr.sort(compareNum);
+//console.log(arr);
+//function compareNum(a, b) {
+//    return a - b;
+//}
+
+//arr.pop(); //удаляет последний елемент массива
+//arr.push(10); //добавляет последний елемент
+
+//for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+//}
+
+//for(let value of arr) {
+//    console.log(value);
+//}
+
+//arr.forEach(function(item, i, arr) {
+//    console.log(`${i}: ${item} inside an array ${arr}`);
+//})
+
+//const str = prompt('', '');
+//const products = str.split(', ');
+//products.sort();
+//console.log(products.join('; '));
+
+// Передача по посиланню или по значенню, Spread оператор ..
+// let a = 5,
+//     b = a;
+// b = b + 5;
+// console.log(b);
+// console.log(a);
+
+// const obj = {
+//    a: 5,
+//    b: 1
+//};
+//const copy = obj; // Посилання
+//copy.a = 10;
+//console.log(copy);
+//console.log(obj);
+
+//function copy(mainObj) {
+//    let objCopy = {};
+//    let key;
+//    for (key in mainObj) {
+//        objCopy[key] = mainObj[key];
+//    }
+//    return objCopy;
+//}
+
+//const numbers = {
+//    a: 2,
+//    b: 5,
+//    c:{
+//        x: 7,
+//        y: 4
+//    }
+//};
+//const newNumbers = copy(numbers);
+//newNumbers.a = 10;
+//newNumbers.a.x = 10; // Посилання знову..
+//console.log(newNumbers); 
+//console.log(numbers);
+
+//const add =  {
+//    d: 17,
+//    e: 20
+//};
+
+//console.log(Object.assign(numbers, add));
+
+//const clone = Object.assign({},add);
+//clone.d = 20;
+//console.log(add);
+//console.log(clone);
+
+//const oldArray = ['a', 'b', 'c'];
+//const newArray = oldArray.slice();
+//newArray[1] = 'hard';
+//console.log(newArray);
+//console.log(oldArray);
+
+//const video = ['youtube', 'vimeo', 'rutube'],
+//      blogs = ['wordpress', 'livejournal', 'blogger'],
+//      internet = [...video, ...blogs, 'vk', 'facebook '];
+
+//console.log(internet);
+
+//function log(a, b, c) {
+//    console.log(a);
+//    console.log(b);
+//    console.log(c);
+//}
+
+//const num = [2, 5, 7];
+
+//log(...num);
+
+// const array = ['a', 'b'];
+// const newAarray = [...array]; 
+// console.log(newAarray);
+
+// const q  = {
+//    one: 1,
+//    two: 2
+// };
+// const newObj = {...q};
+//console.log(newObj);
+
+// First Level Objects Tasks ..
+//const personalPlanPeter = {
+//    name: "Peter",
+//    age: "29",
+//    skills: {
+//        languages: ['ru', 'eng'],
+//        programmingLangs: {
+//            js: '20%',
+//            php: '10%'
+//        },
+//        exp: '1 month',
+//    },
+//    showAgeAndLangs: function (al) {
+//        const {age} = al;
+//        const {languages} = al.skills;
+//        let str = `Мне ${age} и я владею языками: `;
+//        languages.forEach(function(lang) {
+//            str += `${lang.toUpperCase()} `;
+//        });
+//        return str;
+//    }
+//};
+//console.log(personalPlanPeter.showAgeAndLangs(personalPlanPeter));
+
+//function showExperience() {
+//    const newExp = personalPlanPeter.skills.exp;
+//   return newExp;    
+//}
+//console.log(showExperience(personalPlanPeter));
+
+//'Language js learned by 20% Language PHP learned by 10%';
+//function showProgrammingLangs(plan) {
+//    let str = '';
+//    const {programmingLangs} = plan.skills;
+//    for (let key in programmingLangs) {
+//        str += `Language ${key} learned by ${programmingLangs[key]}\n`;
+//    }
+//    return str;
+//}
+    
+//console.log(showProgrammingLangs(personalPlanPeter));
+
+// Second Level ..
+// МІЙ СПОСІБ
+//const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+//'Family consist of :[...]'
+//function showFamily(family) {
+//    let str = '';
+//    if (str === []) {
+//        str = 'Family is empty';
+//    } else {
+//    str += `Family consist of : ${[...family]}`;
+//    return str;
+//    }
+//}
+//console.log(showFamily(family));
+
+// Запропонований варіант 
+//function showFamily(arr) {
+//    let str = '';
+
+//    arr.length === 0 ? str = 'Семья пуста' : str = 'Семья состоит из: ';
+
+//    arr.forEach(member => {
+//        str += `${member}`
+//    });
+
+//    return str;
+//}
+//console.log(showFamily(family));
+
+//const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+//function standardizeStrings (arr) {
+//  arr.forEach(cities => {
+//    console.log(cities.toLowerCase());
+//  });
+//}
+//standardizeStrings(favoriteCities);
+
+// Third Level ..
+//const someString = 'This is some strange string';
+//function reverse(str) {
+//    if (typeof(str) !== 'string') {
+//        return "Error!";
+//    }
+//    return str.split('').reverse().join('');
+//}
+//console.log(reverse(someString));
+
+//' No currencies available'
+//const baseCurrencies = ['USD', 'EUR'];
+//const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+
+//function availableCurr(arr, missingCurr) {
+//    let str = '';
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] === missingCurr) {
+//             continue;
+//         }
+//         str += `${arr[i]}\n`;
+//     }
+//
+//    return str;
+//}
+
+//console.log(availableCurr([...baseCurrencies, ...additionalCurrencies], 'CNY'));
+
+// Основи ООП ..
+
+const soldier = {
+    health : 400,
+    armor : 100,
+    sayHello : function() {
+        console.log('Hello!');
+    }
+};
+
+const john = {
+    health : 100
+};
+
+Object.setPrototypeOf(john, soldier); 
+john.sayHello();
 
