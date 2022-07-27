@@ -668,18 +668,219 @@
 
 // Основи ООП ..
 
-const soldier = {
-    health : 400,
-    armor : 100,
-    sayHello : function() {
-        console.log('Hello!');
-    }
-};
+//const soldier = {
+//    health : 400,
+//    armor : 100,
+//    sayHello : function() {
+//        console.log('Hello!');
+//    }
+//};
+//const john = Object.create(soldier);
+//const john = {
+//    health : 100
+//};
 
-const john = {
-    health : 100
-};
+//Object.setPrototypeOf(john, soldier); 
+//john.sayHello();
 
-Object.setPrototypeOf(john, soldier); 
-john.sayHello();
+// First Advanced Level Work with Objects ..
+
+//const shoppingMallData = {
+//    shops: [
+//        {
+//            width: 10,
+//            length: 5
+//        },
+//        {
+//            width: 15,
+//            length: 7
+//        },
+//        {
+//            width: 20,
+//            length: 5
+//        },
+//        {
+//            width: 8,
+//            length: 10
+//        }
+//    ],
+//    height: 5,
+//    moneyPer1m3: 30,
+//    budget: 50000
+//};
+
+//function isBudgetEnough(data) {
+//    let square = 0;
+//    let volume = 0;
+
+//    data.shops.forEach(shop => {
+//        square += shop.width * shop.length;
+//    });
+
+//    volume = data.height * square;
+
+//    if (data.budget - (volume * data.moneyPer1m3) >= 0) {
+//        return 'Бюджета достаточно';
+//    } else {
+//        return 'Бюджета недостаточно';
+//    }
+//}
+
+//isBudgetEnough(shoppingMallData);
+
+// Second Level ..
+
+//const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam'];
+
+//function sortStudentsByGroups(arr) {
+//    arr.sort();
+//    const a = [], b = [], c = [], rest = [];
+
+//    for (let i = 0; i < arr.length; i++) {
+//        if (i < 3) {
+//            a.push(arr[i]);
+//        } else if (i < 6) {
+//            b.push(arr[i]);
+//        } else if (i < 9) {
+//            c.push(arr[i]);
+//        } else {
+//            rest.push(arr[i]);
+//        }
+//    }
+//    return [a,b,c, `Оставшиеся студенты: ${rest.length === 0 ? '-' : rest.join(', ')}`]
+//}
+
+//console.log(sortStudentsByGroups(students));
+
+// Breakpoints ..
+//function hello () {
+//    console.log('Hello World!');
+//}
+//hello();
+//function hi() {
+//    console.log('Hi!');
+//}
+//hi();
+//const arr = [1, 14, 4, 30, 54 ],
+//      sorted = arr.sort(compareNum);
+//function compareNum(a, b) {
+//    return a - b;
+//}
+
+// Динамічна типизація данних в JS...
+
+// To String
+//1)
+//console.log(typeof(String(null)));
+//2)
+//console.log(typeof(5 + ''));
+//const fontSize = 26 + 'px';
+
+// To Number
+//1)
+//console.log(typeof(Number('4')));
+
+//2)
+//console.log(typeof(+'5'));
+
+//3)
+//console.log(typeof(parseInt('15px', 10)));
+
+//let answer = + prompt('Hello', '');
+
+// To Boolean
+//0, '', null, undefined, NaN = FALSE;
+//1)
+//let switcher = null;
+//if (switcher) {
+//    console.log('Working..');
+//}
+//switcher = 1;
+//if (switcher) {
+//    console.log('Working..');
+//}
+
+//2)
+//console.log(typeof(Boolean('4'))); 
+
+//3)
+//console.log(typeof(!!'4')); 
+
+// DOM ..
+//const box = document.getElementById('');
+//console.log();
+
+//const btns = document.getElementsByTagName(''); - 'псевдомасив'
+//const btns = document.getElementsByTagName('')[1];
+//console.log(btns[1]); 
+
+//const circles = document.getElementsByClassName(''); 
+//console.log();
+
+//const hearts = document.querySelectorAll('.heart');
+//hearts.forEach(item => {
+//    console.log();
+//});
+
+//const oneHeart = document.querySelector('.heart');
+//console.log();
+
+//const box = document.getElementById('box'),
+//      btns = document.getElementsByTagName('button'),
+//      circles = document.getElementsByClassName('circle'),
+//      hearts = document.querySelectorAll('.heart'),
+//      oneHeart = document.querySelector('.heart'),
+//      wrapper = document.querySelector('wrapper');
+
+//box.style.backgroundColor = 'blue';
+//box.style.width = '500px';
+//box.style.cssText = 'background - color: blue; width: 500px';
+
+//btns[1].style.borderRadius = '100%';
+//circles[0].style.backgroundColor = 'red';
+
+//for( let i = 0; i < hearts.length; i++) {
+//    hearts[i].style.backgroundColor = 'blue';
+//}
+//hearts.forEach(item => {
+//    item.style.backgroundColor = 'blue';
+//});
+
+//const div = document.createElement('div');
+//const text = document.createTextNode('Text');
+
+//div.classList.add('black');
+//document.body.append(div);
+
+//wrapper.append(div);
+
+//wrapper.prepend(div);
+
+//hearts[0].before(div);
+//hearts[0].after(div);
+
+//wrapper.insertBefore(div, hearts[0]);
+//wrapper.removeChild(hearts[1]);
+//circles[0].remove();
+
+//hearts[0].replaceWith(circles[0]);
+
+//div.innerHTML = 'Hello World';
+//div.textContent = 'Hello World';
+
+// div.insertAdjacentHTML('beforebegin', '<h2>Hello</h2>');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
