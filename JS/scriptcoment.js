@@ -870,6 +870,166 @@
 
 // div.insertAdjacentHTML('beforebegin', '<h2>Hello</h2>');
 
+//const btns = document.querySelectorAll('button'),
+//      overlay = document.querySelector('.overlay'); 
+
+//btn.onclick = function() {
+//    alert('Click');
+//};
+//let i = 0;
+//const deleteElement = (e) => {
+//    console.log(e.currentTarget);
+//    console.log(e.type);
+//    i++;
+//    if (i == 1) {
+//        btn.removeEventListener('mouseenter', deleteElement);
+//    }
+//    e.target.remove();
+//}; 
+//btn.addEventListener('mouseenter', deleteElement);
+//overlay.addEventListener('mouseenter', deleteElement);
+//btns.forEach (item => {
+//    item.addEventListener('click', deleteElement, {once: true});
+//});
+
+//const link = document.querySelector('a');
+
+//link.addEventListener('click', function(event) {
+//    event.preventDefault();
+//    console.log(event.target);
+//});
+
+//console.log(document.body);
+//console.log(document.documentElement); 
+//console.log(document.body.childNodes);
+//console.log(document.body.firstChild);
+
+//console.log(document.querySelector('#current').parentNode);
+
+//console.log(document.querySelector('[data-current="2"]').nextElementSibling);
+
+//for (let node of document.body.childNodes) {
+//    if(node.nodeName == '#text') {
+//        continue;
+//    }
+//    console.log(node);
+//}
+
+// Рекурсия
+
+//function pow (x, n) {
+//     let result = 1;
+//
+//     for (let i = 0; i < n; i++){
+//        result *= x;
+//        //result = x * result;
+//     }
+//    return result;
+//}
+
+//function pow(x, n) {
+//    if (n ===1) {
+//        return x;
+//    } else {
+//        return x * pow(x, n - 1);
+//    }
+//}
+
+//let students = {
+//    js: [{
+//        name: 'John',
+//        progress: 100
+//    }, {
+//        name: 'Ivan',
+//        progress: 60
+//    }],
+//
+//    html: {
+//        basic: [{
+//            name: 'Peter',
+//            progress : 20
+//        }, {
+//            name: 'Ann',
+//            progress: 18
+//        }],
+//
+//        pro: [{
+//            name: 'Sam',
+//            progress: 10
+//        }]
+//    }
+//};
+
+//function getTotalProgressByIteration (data) {
+//    let total = 0;
+//    let students = 0;
+
+//    for (let course of Object.values(data)) {
+//        if(Array.isArray(course)) {
+//            students += course.length;
+            
+//            for(let i = 0; i < course.length; i++) {
+//                total += course[i].progress;
+//            }
+//        } else {
+//            for (let subCourse of Object.values(course)) {
+//                students += subCourse.length;
+
+//                for(let i = 0; i < subCourse.length; i++) {
+//                    total += subCourse[i].progress;
+//                }
+//            }
+//        }
+//    }
+
+
+//    return total / students;
+//}
+//console.log(getTotalProgressByIteration(students));
+
+//function getTotalProgressByRecursion(data) {
+//    if(Array.isArray(data)) {
+//        let total = 0;
+
+
+//        for(let i = 0; i < data.length; i++) {
+//            total += data[i].progress;
+//        }
+//
+//        return [total, data.length];
+//    } else {
+//        let total = [0, 0];
+
+//        for(let subData of Object.values(data)) {
+//            const subDataArr = getTotalProgressByRecursion(subData);
+//            total[0] += subDataArr[0];
+//            total[1] += subDataArr[1];
+//        }
+//        return total;
+//}
+//}
+
+//const result = getTotalProgressByRecursion(students);
+
+//console.log(result[0]/result[1]);
+ 
+
+// Recursion Task
+
+//function getFactorial(n) {
+//  if (typeof(n) !== 'number' || !Number.isInteger(n)) {
+//    return 'Error, check data';
+//  }
+//  if (n >= 1) {
+//    return n * getFactorial(n-1);
+//  } else {
+//    return 1;
+//  }
+//}
+//console.log(getFactorial(4));
+
+
+
 
 
 
