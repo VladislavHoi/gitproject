@@ -157,12 +157,12 @@
 //}
 //console.log(arr);
 // Second Level
-//const arrNumber = [3, 5, 8, 16, 20, 23, 50];
-//const result = [];
-//for (let i = 0; i < arr.length; i++) {
-//result[i] = arrNumber[i];
-//}
-//console.log(result);
+// const arrNumber = [3, 5, 8, 16, 20, 23, 50];
+// const result = [];
+// for (let i = 0; i < arr.length; i++) {
+// result[i] = arrNumber[i];
+// }
+// console.log(result);
 
 //const data = [5, 10, 'Shopping', 20, 'Homework'];
 //for (let i = 0; i < data.length; i++) {
@@ -1027,6 +1027,67 @@
 //  }
 //}
 //console.log(getFactorial(4));
+
+
+//MOBILE EVENTS ..
+
+//touchstart
+//touchmove
+//touchend
+//touchenter
+//touchleave
+//touchcancel
+
+// window.addEventListener("DOMContentLoaded", () => {
+//     const box = document.querySelector('.box');
+
+//     box.addEventListener('touchstart', (e) => {
+//         e.preventDefault();
+
+//         console.log('Start!');
+//         console.log(e.targetTouches);
+//     });
+
+//     box.addEventListener('touchmove', (e) => {
+//         e.preventDefault();
+
+//         console.log(e.targetTouches[0].pageX);
+//     });
+// });
+
+    //     box.addEventListener('touchend', (e) => {
+    //         e.preventDefault();
+    
+    //         console.log('End!');
+    //     });
+    // });
+
+
+// touches
+// targetTouches
+// changedTouches
+
+
+// Async, defer
+
+// const p = document.querySelectorAll('p');
+// console.log(p);
+ 
+
+// function loadScript(src) {
+//     const script = document.createElement('script');
+//     script.src = src;
+//     script.async = false;
+//     document.body.append(script); 
+// }
+
+// loadScript("JS/sciptgit.js");
+// // loadScript();
+
+
+
+
+
 
 
 
